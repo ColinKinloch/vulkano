@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `UnsafeCommandBufferBuilder` struct in crate `vulkano`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, UnsafeCommandBufferBuilder">
+
+    <title>vulkano::command_buffer::sys::UnsafeCommandBufferBuilder - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../index.html'>vulkano</a>::<wbr><a href='../index.html'>command_buffer</a>::<wbr><a href='index.html'>sys</a></p><script>window.sidebarCurrent = {name: 'UnsafeCommandBufferBuilder', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../index.html'>vulkano</a>::<wbr><a href='../index.html'>command_buffer</a>::<wbr><a href='index.html'>sys</a>::<wbr><a class='struct' href=''>UnsafeCommandBufferBuilder</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-3403' class='srclink' href='../../../src/vulkano/vulkano/src/command_buffer/sys.rs.html#62-75' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct UnsafeCommandBufferBuilder&lt;P&gt; <span class='where'>where P: <a class='trait' href='../../../vulkano/command_buffer/pool/trait.CommandPool.html' title='vulkano::command_buffer::pool::CommandPool'>CommandPool</a></span> {
+    // some fields omitted
+}</pre><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl&lt;P&gt; <a class='struct' href='../../../vulkano/command_buffer/sys/struct.UnsafeCommandBufferBuilder.html' title='vulkano::command_buffer::sys::UnsafeCommandBufferBuilder'>UnsafeCommandBufferBuilder</a>&lt;P&gt; <span class='where'>where P: <a class='trait' href='../../../vulkano/command_buffer/pool/trait.CommandPool.html' title='vulkano::command_buffer::pool::CommandPool'>CommandPool</a></span></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-3411' class='srclink' href='../../../src/vulkano/vulkano/src/command_buffer/sys.rs.html#77-781' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>&lt;R,&nbsp;Rf&gt;(pool: P, kind: <a class='enum' href='../../../vulkano/command_buffer/sys/enum.Kind.html' title='vulkano::command_buffer::sys::Kind'>Kind</a>&lt;R,&nbsp;Rf&gt;, flags: <a class='enum' href='../../../vulkano/command_buffer/sys/enum.Flags.html' title='vulkano::command_buffer::sys::Flags'>Flags</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../../vulkano/command_buffer/sys/struct.UnsafeCommandBufferBuilder.html' title='vulkano::command_buffer::sys::UnsafeCommandBufferBuilder'>UnsafeCommandBufferBuilder</a>&lt;P&gt;,&nbsp;<a class='enum' href='../../../vulkano/enum.OomError.html' title='vulkano::OomError'>OomError</a>&gt; <span class='where'>where R: <a class='trait' href='../../../vulkano/framebuffer/trait.RenderPass.html' title='vulkano::framebuffer::RenderPass'>RenderPass</a> + 'static + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Send.html' title='core::marker::Send'>Send</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html' title='core::marker::Sync'>Sync</a>, Rf: <a class='trait' href='../../../vulkano/framebuffer/trait.RenderPass.html' title='vulkano::framebuffer::RenderPass'>RenderPass</a> + 'static + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Send.html' title='core::marker::Send'>Send</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html' title='core::marker::Sync'>Sync</a></span></code></h4>
+<div class='docblock'><p>Creates a new builder.</p>
+</div><h4 id='method.already_allocated' class='method'><code>unsafe fn <a href='#method.already_allocated' class='fnname'>already_allocated</a>&lt;R,&nbsp;Rf&gt;(pool: P, cmd: <a class='struct' href='../../../vulkano/command_buffer/pool/struct.AllocatedCommandBuffer.html' title='vulkano::command_buffer::pool::AllocatedCommandBuffer'>AllocatedCommandBuffer</a>, kind: <a class='enum' href='../../../vulkano/command_buffer/sys/enum.Kind.html' title='vulkano::command_buffer::sys::Kind'>Kind</a>&lt;R,&nbsp;Rf&gt;, flags: <a class='enum' href='../../../vulkano/command_buffer/sys/enum.Flags.html' title='vulkano::command_buffer::sys::Flags'>Flags</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../../vulkano/command_buffer/sys/struct.UnsafeCommandBufferBuilder.html' title='vulkano::command_buffer::sys::UnsafeCommandBufferBuilder'>UnsafeCommandBufferBuilder</a>&lt;P&gt;,&nbsp;<a class='enum' href='../../../vulkano/enum.OomError.html' title='vulkano::OomError'>OomError</a>&gt; <span class='where'>where R: <a class='trait' href='../../../vulkano/framebuffer/trait.RenderPass.html' title='vulkano::framebuffer::RenderPass'>RenderPass</a> + 'static + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Send.html' title='core::marker::Send'>Send</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html' title='core::marker::Sync'>Sync</a>, Rf: <a class='trait' href='../../../vulkano/framebuffer/trait.RenderPass.html' title='vulkano::framebuffer::RenderPass'>RenderPass</a> + 'static + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Send.html' title='core::marker::Send'>Send</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html' title='core::marker::Sync'>Sync</a></span></code></h4>
+<div class='docblock'><p>Creates a new command buffer builder from an already-allocated command buffer.</p>
+
+<h1 id='safety' class='section-header'><a href='#safety'>Safety</a></h1>
+<ul>
+<li>The allocated command buffer must belong to the pool and must not be used anywhere else
+in the code for the duration of this command buffer.</li>
+</ul>
+</div><h4 id='method.build' class='method'><code>fn <a href='#method.build' class='fnname'>build</a>(self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../../vulkano/command_buffer/sys/struct.UnsafeCommandBuffer.html' title='vulkano::command_buffer::sys::UnsafeCommandBuffer'>UnsafeCommandBuffer</a>&lt;P&gt;,&nbsp;<a class='enum' href='../../../vulkano/enum.OomError.html' title='vulkano::OomError'>OomError</a>&gt;</code></h4>
+<div class='docblock'><p>Finishes building the command buffer.</p>
+</div><h4 id='method.pool' class='method'><code>fn <a href='#method.pool' class='fnname'>pool</a>(&amp;self) -&gt; &amp;P</code></h4>
+<div class='docblock'><p>Returns the pool used to create this command buffer builder.</p>
+</div><h4 id='method.device' class='method'><code>fn <a href='#method.device' class='fnname'>device</a>(&amp;self) -&gt; &amp;<a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../../vulkano/device/struct.Device.html' title='vulkano::device::Device'>Device</a>&gt;</code></h4>
+<div class='docblock'><p>Returns the device this command buffer belongs to.</p>
+</div><h4 id='method.is_secondary' class='method'><code>fn <a href='#method.is_secondary' class='fnname'>is_secondary</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>Returns true if this is a secondary command buffer.</p>
+</div><h4 id='method.clear_color_image' class='method'><code>unsafe fn <a href='#method.clear_color_image' class='fnname'>clear_color_image</a>&lt;I&gt;(&amp;mut self, image: &amp;<a class='struct' href='../../../vulkano/image/sys/struct.UnsafeImage.html' title='vulkano::image::sys::UnsafeImage'>UnsafeImage</a>, general_layout: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>, color: <a class='enum' href='../../../vulkano/format/enum.ClearValue.html' title='vulkano::format::ClearValue'>ClearValue</a>, ranges: I) <span class='where'>where I: <a class='trait' href='https://doc.rust-lang.org/nightly/core/iter/iterator/trait.Iterator.html' title='core::iter::iterator::Iterator'>Iterator</a>&lt;Item=<a class='struct' href='../../../vulkano/command_buffer/sys/struct.ImageSubresourcesRange.html' title='vulkano::command_buffer::sys::ImageSubresourcesRange'>ImageSubresourcesRange</a>&gt;</span></code></h4>
+<div class='docblock'><p>Clears an image with a color format, from outside of a render pass.</p>
+
+<p>If <code>general_layout</code> is true, then the <code>General</code> image layout is used. Otherwise the
+<code>TransferDstOptimal</code> layout is used.</p>
+
+<h1 id='panic' class='section-header'><a href='#panic'>Panic</a></h1>
+<ul>
+<li>Panics if the image was not created with the same device as this command buffer.</li>
+<li>Panics if the clear values is not a color value.</li>
+</ul>
+
+<h1 id='safety-1' class='section-header'><a href='#safety-1'>Safety</a></h1>
+<ul>
+<li>The image must be kept alive and must be properly synchronized while this command
+buffer runs.</li>
+<li>The ranges must be in range of the image.</li>
+<li>The image must have a non-compressed color format.</li>
+<li>The clear value must match the format of the image.</li>
+<li>The queue family must support graphics or compute operations.</li>
+<li>The image must have been created with the &quot;transfer_dest&quot; usage.</li>
+<li>Must be called outside of a render pass.</li>
+</ul>
+</div><h4 id='method.clear_depth_stencil_image' class='method'><code>unsafe fn <a href='#method.clear_depth_stencil_image' class='fnname'>clear_depth_stencil_image</a>&lt;I&gt;(&amp;mut self, image: &amp;<a class='struct' href='../../../vulkano/image/sys/struct.UnsafeImage.html' title='vulkano::image::sys::UnsafeImage'>UnsafeImage</a>, general_layout: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>, color: <a class='enum' href='../../../vulkano/format/enum.ClearValue.html' title='vulkano::format::ClearValue'>ClearValue</a>, ranges: I) <span class='where'>where I: <a class='trait' href='https://doc.rust-lang.org/nightly/core/iter/iterator/trait.Iterator.html' title='core::iter::iterator::Iterator'>Iterator</a>&lt;Item=<a class='struct' href='../../../vulkano/command_buffer/sys/struct.ImageSubresourcesRange.html' title='vulkano::command_buffer::sys::ImageSubresourcesRange'>ImageSubresourcesRange</a>&gt;</span></code></h4>
+<div class='docblock'><p>Clears an image with a depth, stencil or depth-stencil format, from outside of a
+render pass.</p>
+
+<p>If the <code>ClearValue</code> is a depth value, then only the depth component will be cleared. Same
+for stencil. If it contains a depth-stencil value, then they will both be cleared.</p>
+
+<p>If <code>general_layout</code> is true, then the <code>General</code> image layout is used. Otherwise the
+<code>TransferDstOptimal</code> layout is used.</p>
+
+<h1 id='panic-1' class='section-header'><a href='#panic-1'>Panic</a></h1>
+<ul>
+<li>Panics if the image was not created with the same device as this command buffer.</li>
+<li>Panics if the mipmap levels range or the array layers range is invalid, ie. if the end
+is inferior to the start.</li>
+<li>Panics if the clear values is not a depth, stencil or depth-stencil value.</li>
+</ul>
+
+<h1 id='safety-2' class='section-header'><a href='#safety-2'>Safety</a></h1>
+<ul>
+<li>The image must be kept alive and must be properly synchronized while this command
+buffer runs.</li>
+<li>The ranges must be in range of the image.</li>
+<li>The image must have a depth, stencil or depth-stencil format.</li>
+<li>The clear value must match the format of the image.</li>
+<li>The queue family must support graphics operations.</li>
+<li>The image must have been created with the &quot;transfer_dest&quot; usage.</li>
+<li>Must be called outside of a render pass.</li>
+</ul>
+</div><h4 id='method.clear_attachments' class='method'><code>unsafe fn <a href='#method.clear_attachments' class='fnname'>clear_attachments</a>&lt;Ia,&nbsp;Ir&gt;(&amp;mut self, attachments: Ia, rects: Ir) <span class='where'>where Ia: <a class='trait' href='https://doc.rust-lang.org/nightly/core/iter/iterator/trait.Iterator.html' title='core::iter::iterator::Iterator'>Iterator</a>&lt;Item=<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, <a class='enum' href='../../../vulkano/format/enum.ClearValue.html' title='vulkano::format::ClearValue'>ClearValue</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>&gt;, Ir: <a class='trait' href='https://doc.rust-lang.org/nightly/core/iter/iterator/trait.Iterator.html' title='core::iter::iterator::Iterator'>Iterator</a>&lt;Item=<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 3]</a>&gt;</span></code></h4>
+<div class='docblock'><p>Clears attachments of the current render pass.</p>
+
+<p>You must pass a list of attachment ids and clear values, and a list of rectangles. Each
+rectangle of each attachment will be cleared. The rectangle&#39;s format is
+<code>[(x, width), (y, height), (array_layer, num_array_layers)]</code>.</p>
+
+<p>No memory barriers are needed between this function and preceding or subsequent draw or
+attachment clear commands in the same subpass.</p>
+
+<h1 id='panic-2' class='section-header'><a href='#panic-2'>Panic</a></h1>
+<ul>
+<li>Panics if one of the clear values is <code>None</code>.</li>
+</ul>
+
+<h1 id='safety-3' class='section-header'><a href='#safety-3'>Safety</a></h1>
+<ul>
+<li>The attachments ids must be valid, and the clear value must match the format of the
+attachments.</li>
+<li>Must be called from within a render pass.</li>
+<li>The rects must be in range of the framebuffer.</li>
+</ul>
+</div><h4 id='method.fill_buffer' class='method'><code>unsafe fn <a href='#method.fill_buffer' class='fnname'>fill_buffer</a>(&amp;mut self, buffer: &amp;<a class='struct' href='../../../vulkano/buffer/sys/struct.UnsafeBuffer.html' title='vulkano::buffer::sys::UnsafeBuffer'>UnsafeBuffer</a>, offset: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>, size: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>, data: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>)</code></h4>
+<div class='docblock'><p>Fills a buffer by repeating a 32 bits data.</p>
+
+<p>This is similar to the <code>memset</code> function in C/C++.</p>
+
+<h1 id='panic-3' class='section-header'><a href='#panic-3'>Panic</a></h1>
+<ul>
+<li>Panics if the buffer was not created with the same device as this command buffer.</li>
+</ul>
+
+<h1 id='safety-4' class='section-header'><a href='#safety-4'>Safety</a></h1>
+<ul>
+<li>The buffer must be kept alive and must be properly synchronized while this command
+buffer runs.</li>
+<li>The queue family must support graphics or compute operations.</li>
+<li>Type safety is not checked.</li>
+<li>The offset must be a multiple of four.</li>
+<li>The size must be a multiple of four, or must point to the end of the buffer.</li>
+<li>The buffer must have been created with the &quot;transfer_dest&quot; usage.</li>
+<li>Must be called outside of a render pass.</li>
+</ul>
+</div><h4 id='method.update_buffer' class='method'><code>unsafe fn <a href='#method.update_buffer' class='fnname'>update_buffer</a>&lt;D:&nbsp;?<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a>&gt;(&amp;mut self, buffer: &amp;<a class='struct' href='../../../vulkano/buffer/sys/struct.UnsafeBuffer.html' title='vulkano::buffer::sys::UnsafeBuffer'>UnsafeBuffer</a>, offset: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>, size: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>, data: &amp;D) <span class='where'>where D: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> + 'static</span></code></h4>
+<div class='docblock'><p>Fills a buffer with some data.</p>
+
+<p>The actual size that is copied is the minimum between the size of the slice and the size
+of the data.</p>
+
+<h1 id='panic-4' class='section-header'><a href='#panic-4'>Panic</a></h1>
+<ul>
+<li>Panics if the buffer was not created with the same device as this command buffer.</li>
+</ul>
+
+<h1 id='safety-5' class='section-header'><a href='#safety-5'>Safety</a></h1>
+<ul>
+<li>The buffer must be kept alive and must be properly synchronized while this command
+buffer runs.</li>
+<li>Type safety is not checked.</li>
+<li>The offset and size must be multiples of four.</li>
+<li>The size must be less than or equal to 65536 bytes (ie. 64kB).</li>
+<li>The buffer must have been created with the &quot;transfer_dest&quot; usage.</li>
+<li>Must be called outside of a render pass.</li>
+</ul>
+</div><h4 id='method.copy_buffer' class='method'><code>unsafe fn <a href='#method.copy_buffer' class='fnname'>copy_buffer</a>&lt;I&gt;(&amp;mut self, src: &amp;<a class='struct' href='../../../vulkano/buffer/sys/struct.UnsafeBuffer.html' title='vulkano::buffer::sys::UnsafeBuffer'>UnsafeBuffer</a>, dest: &amp;<a class='struct' href='../../../vulkano/buffer/sys/struct.UnsafeBuffer.html' title='vulkano::buffer::sys::UnsafeBuffer'>UnsafeBuffer</a>, regions: I) <span class='where'>where I: <a class='trait' href='https://doc.rust-lang.org/nightly/core/iter/traits/trait.IntoIterator.html' title='core::iter::traits::IntoIterator'>IntoIterator</a>&lt;Item=<a class='struct' href='../../../vulkano/command_buffer/sys/struct.BufferCopyRegion.html' title='vulkano::command_buffer::sys::BufferCopyRegion'>BufferCopyRegion</a>&gt;</span></code></h4>
+<div class='docblock'><p>Copies data from a source buffer to a destination buffer.</p>
+
+<p>This is similar to the <code>memcpy</code> function in C/C++.</p>
+
+<p>Automatically filters out empty regions.</p>
+
+<h1 id='panic-5' class='section-header'><a href='#panic-5'>Panic</a></h1>
+<ul>
+<li>Panics if one of the buffers was not created with the same device as this
+command buffer.</li>
+</ul>
+
+<h1 id='safety-6' class='section-header'><a href='#safety-6'>Safety</a></h1>
+<ul>
+<li>The buffers must be kept alive and must be properly synchronized while this command
+buffer runs.</li>
+<li>Type safety is not checked.</li>
+<li>The source buffer must have been created with the &quot;transfer_src&quot; usage.</li>
+<li>The destination buffer must have been created with the &quot;transfer_dest&quot; usage.</li>
+<li>Must be called outside of a render pass.</li>
+<li>The offsets and size of the regions must be in range.</li>
+</ul>
+</div><h4 id='method.pipeline_barrier' class='method'><code>fn <a href='#method.pipeline_barrier' class='fnname'>pipeline_barrier</a>(&amp;mut self, barrier: <a class='struct' href='../../../vulkano/command_buffer/sys/struct.PipelineBarrierBuilder.html' title='vulkano::command_buffer::sys::PipelineBarrierBuilder'>PipelineBarrierBuilder</a>)</code></h4>
+<div class='docblock'><p>Adds a pipeline barrier to the command buffer.</p>
+
+<p>This function itself is not unsafe, but creating a pipeline barrier builder is.</p>
+</div><h4 id='method.begin_render_pass' class='method'><code>unsafe fn <a href='#method.begin_render_pass' class='fnname'>begin_render_pass</a>&lt;L,&nbsp;I&gt;(&amp;mut self, render_pass: &amp;<a class='struct' href='../../../vulkano/framebuffer/struct.UnsafeRenderPass.html' title='vulkano::framebuffer::UnsafeRenderPass'>UnsafeRenderPass</a>, framebuffer: &amp;<a class='struct' href='../../../vulkano/framebuffer/struct.Framebuffer.html' title='vulkano::framebuffer::Framebuffer'>Framebuffer</a>&lt;L&gt;, clear_values: I, rect: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='struct' href='https://doc.rust-lang.org/nightly/core/ops/struct.Range.html' title='core::ops::Range'>Range</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>&gt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 2]</a>, secondary: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>) <span class='where'>where I: <a class='trait' href='https://doc.rust-lang.org/nightly/core/iter/iterator/trait.Iterator.html' title='core::iter::iterator::Iterator'>Iterator</a>&lt;Item=<a class='enum' href='../../../vulkano/format/enum.ClearValue.html' title='vulkano::format::ClearValue'>ClearValue</a>&gt;</span></code></h4>
+<div class='docblock'><p>Enters a render pass.</p>
+
+<p>Any clear value that is equal to <code>None</code> is replaced with a dummy value. It is expected that
+<code>None</code> is passed only for attachments that are not cleared.</p>
+
+<h1 id='panic-6' class='section-header'><a href='#panic-6'>Panic</a></h1>
+<ul>
+<li>Panics if the render pass or framebuffer was not created with the same device as this
+command buffer.</li>
+<li>Panics if one of the ranges is invalid.</li>
+</ul>
+
+<h1 id='safety-7' class='section-header'><a href='#safety-7'>Safety</a></h1>
+<ul>
+<li>Must be called outside of a render pass.</li>
+<li>The queue family must support graphics operations.</li>
+<li>The render pass and the framebuffer must be kept alive.</li>
+<li>The render pass and the framebuffer must be compatible.</li>
+<li>The clear values must be valid for the attachments.</li>
+</ul>
+</div><h4 id='method.next_subpass' class='method'><code>unsafe fn <a href='#method.next_subpass' class='fnname'>next_subpass</a>(&amp;mut self, secondary: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></h4>
+<div class='docblock'><p>Goes to the next subpass of the render pass.</p>
+
+<h1 id='safety-8' class='section-header'><a href='#safety-8'>Safety</a></h1>
+<ul>
+<li>Must be called inside of a render pass.</li>
+<li>Must not be at the last subpass of the render pass.</li>
+</ul>
+</div><h4 id='method.end_render_pass' class='method'><code>unsafe fn <a href='#method.end_render_pass' class='fnname'>end_render_pass</a>(&amp;mut self)</code></h4>
+<div class='docblock'><p>Ends the current render pass.</p>
+
+<h1 id='safety-9' class='section-header'><a href='#safety-9'>Safety</a></h1>
+<ul>
+<li>Must be called inside of a render pass.</li>
+<li>Must be at the last subpass of the render pass.</li>
+</ul>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl&lt;P&gt; <a class='trait' href='../../../vulkano/trait.VulkanObject.html' title='vulkano::VulkanObject'>VulkanObject</a> for <a class='struct' href='../../../vulkano/command_buffer/sys/struct.UnsafeCommandBufferBuilder.html' title='vulkano::command_buffer::sys::UnsafeCommandBufferBuilder'>UnsafeCommandBufferBuilder</a>&lt;P&gt; <span class='where'>where P: <a class='trait' href='../../../vulkano/command_buffer/pool/trait.CommandPool.html' title='vulkano::command_buffer::pool::CommandPool'>CommandPool</a></span></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-3737' class='srclink' href='../../../src/vulkano/vulkano/src/command_buffer/sys.rs.html#783-790' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Object' class='type'><code>type <a href='../../../vulkano/trait.VulkanObject.html#associatedtype.Object' class='type'>Object</a> = <a class='type' href='../../../vk_sys/type.CommandBuffer.html' title='vk_sys::CommandBuffer'>CommandBuffer</a></code></h4>
+<div class='docblock'><p>The type of the object.</p>
+</div><h4 id='method.internal_object' class='method'><code>fn <a href='../../../vulkano/trait.VulkanObject.html#tymethod.internal_object' class='fnname'>internal_object</a>(&amp;self) -&gt; <a class='type' href='../../../vk_sys/type.CommandBuffer.html' title='vk_sys::CommandBuffer'>CommandBuffer</a></code></h4>
+<div class='docblock'><p>Returns a reference to the object.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;P&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html' title='core::ops::Drop'>Drop</a> for <a class='struct' href='../../../vulkano/command_buffer/sys/struct.UnsafeCommandBufferBuilder.html' title='vulkano::command_buffer::sys::UnsafeCommandBufferBuilder'>UnsafeCommandBufferBuilder</a>&lt;P&gt; <span class='where'>where P: <a class='trait' href='../../../vulkano/command_buffer/pool/trait.CommandPool.html' title='vulkano::command_buffer::pool::CommandPool'>CommandPool</a></span></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-3742' class='srclink' href='../../../src/vulkano/vulkano/src/command_buffer/sys.rs.html#792-804' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.drop' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#tymethod.drop' class='fnname'>drop</a>(&amp;mut self)</code></h4>
+<div class='docblock'><p>A method called when the value goes out of scope. <a href="https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#tymethod.drop">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../";
+        window.currentCrate = "vulkano";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../../jquery.js"></script>
+    <script src="../../../main.js"></script>
+    
+    <script defer src="../../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `GraphicsPipelineParams` struct in crate `vulkano`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, GraphicsPipelineParams">
+
+    <title>vulkano::pipeline::GraphicsPipelineParams - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>vulkano</a>::<wbr><a href='index.html'>pipeline</a></p><script>window.sidebarCurrent = {name: 'GraphicsPipelineParams', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>vulkano</a>::<wbr><a href='index.html'>pipeline</a>::<wbr><a class='struct' href=''>GraphicsPipelineParams</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-18105' class='srclink' href='../../src/vulkano/vulkano/src/pipeline/graphics_pipeline.rs.html#58-113' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct GraphicsPipelineParams&lt;'a,&nbsp;Vdef,&nbsp;Vsp,&nbsp;Vi,&nbsp;Vo,&nbsp;Vl,&nbsp;Tcs,&nbsp;Tci,&nbsp;Tco,&nbsp;Tcl,&nbsp;Tes,&nbsp;Tei,&nbsp;Teo,&nbsp;Tel,&nbsp;Gs,&nbsp;Gi,&nbsp;Go,&nbsp;Gl,&nbsp;Fs,&nbsp;Fi,&nbsp;Fo,&nbsp;Fl,&nbsp;L,&nbsp;Rp&gt; <span class='where'>where L: 'a, Rp: 'a</span> {
+    pub vertex_input: Vdef,
+    pub vertex_shader: <a class='struct' href='../../vulkano/pipeline/shader/struct.VertexShaderEntryPoint.html' title='vulkano::pipeline::shader::VertexShaderEntryPoint'>VertexShaderEntryPoint</a>&lt;'a,&nbsp;Vsp,&nbsp;Vi,&nbsp;Vo,&nbsp;Vl&gt;,
+    pub input_assembly: <a class='struct' href='../../vulkano/pipeline/input_assembly/struct.InputAssembly.html' title='vulkano::pipeline::input_assembly::InputAssembly'>InputAssembly</a>,
+    pub tessellation: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../vulkano/pipeline/struct.GraphicsPipelineParamsTess.html' title='vulkano::pipeline::GraphicsPipelineParamsTess'>GraphicsPipelineParamsTess</a>&lt;'a,&nbsp;Tcs,&nbsp;Tci,&nbsp;Tco,&nbsp;Tcl,&nbsp;Tes,&nbsp;Tei,&nbsp;Teo,&nbsp;Tel&gt;&gt;,
+    pub geometry_shader: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../vulkano/pipeline/shader/struct.GeometryShaderEntryPoint.html' title='vulkano::pipeline::shader::GeometryShaderEntryPoint'>GeometryShaderEntryPoint</a>&lt;'a,&nbsp;Gs,&nbsp;Gi,&nbsp;Go,&nbsp;Gl&gt;&gt;,
+    pub viewport: <a class='enum' href='../../vulkano/pipeline/viewport/enum.ViewportsState.html' title='vulkano::pipeline::viewport::ViewportsState'>ViewportsState</a>,
+    pub raster: <a class='struct' href='../../vulkano/pipeline/raster/struct.Rasterization.html' title='vulkano::pipeline::raster::Rasterization'>Rasterization</a>,
+    pub multisample: <a class='struct' href='../../vulkano/pipeline/multisample/struct.Multisample.html' title='vulkano::pipeline::multisample::Multisample'>Multisample</a>,
+    pub fragment_shader: <a class='struct' href='../../vulkano/pipeline/shader/struct.FragmentShaderEntryPoint.html' title='vulkano::pipeline::shader::FragmentShaderEntryPoint'>FragmentShaderEntryPoint</a>&lt;'a,&nbsp;Fs,&nbsp;Fi,&nbsp;Fo,&nbsp;Fl&gt;,
+    pub depth_stencil: <a class='struct' href='../../vulkano/pipeline/depth_stencil/struct.DepthStencil.html' title='vulkano::pipeline::depth_stencil::DepthStencil'>DepthStencil</a>,
+    pub blend: <a class='struct' href='../../vulkano/pipeline/blend/struct.Blend.html' title='vulkano::pipeline::blend::Blend'>Blend</a>,
+    pub layout: &amp;'a <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;L&gt;,
+    pub render_pass: <a class='struct' href='../../vulkano/framebuffer/struct.Subpass.html' title='vulkano::framebuffer::Subpass'>Subpass</a>&lt;'a,&nbsp;Rp&gt;,
+}</pre><div class='docblock'><p>Description of a <code>GraphicsPipeline</code>.</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.vertex_input' class='structfield'><code>vertex_input: Vdef</code>
+                           </span><span class='stab '></span><div class='docblock'><p>Describes the layout of the vertex input.</p>
+
+<p>For example if you want to pass a vertex buffer and an instance buffer, this parameter
+should describe it as well as the offsets and data type of various vertex attributes.</p>
+
+<p>Must implement the <code>VertexDefinition</code> trait.</p>
+</div><span id='structfield.vertex_shader' class='structfield'><code>vertex_shader: <a class='struct' href='../../vulkano/pipeline/shader/struct.VertexShaderEntryPoint.html' title='vulkano::pipeline::shader::VertexShaderEntryPoint'>VertexShaderEntryPoint</a>&lt;'a,&nbsp;Vsp,&nbsp;Vi,&nbsp;Vo,&nbsp;Vl&gt;</code>
+                           </span><span class='stab '></span><div class='docblock'><p>The entry point of the vertex shader that will be run on the vertex input.</p>
+</div><span id='structfield.input_assembly' class='structfield'><code>input_assembly: <a class='struct' href='../../vulkano/pipeline/input_assembly/struct.InputAssembly.html' title='vulkano::pipeline::input_assembly::InputAssembly'>InputAssembly</a></code>
+                           </span><span class='stab '></span><div class='docblock'><p>Describes how vertices should be assembled into primitives. Essentially contains the type
+of primitives.</p>
+</div><span id='structfield.tessellation' class='structfield'><code>tessellation: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../vulkano/pipeline/struct.GraphicsPipelineParamsTess.html' title='vulkano::pipeline::GraphicsPipelineParamsTess'>GraphicsPipelineParamsTess</a>&lt;'a,&nbsp;Tcs,&nbsp;Tci,&nbsp;Tco,&nbsp;Tcl,&nbsp;Tes,&nbsp;Tei,&nbsp;Teo,&nbsp;Tel&gt;&gt;</code>
+                           </span><span class='stab '></span><div class='docblock'><p>Parameters of the tessellation stage. <code>None</code> if you don&#39;t want to use tessellation.
+If you use tessellation, you must enable the <code>tessellation_shader</code> feature on the device.</p>
+</div><span id='structfield.geometry_shader' class='structfield'><code>geometry_shader: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../vulkano/pipeline/shader/struct.GeometryShaderEntryPoint.html' title='vulkano::pipeline::shader::GeometryShaderEntryPoint'>GeometryShaderEntryPoint</a>&lt;'a,&nbsp;Gs,&nbsp;Gi,&nbsp;Go,&nbsp;Gl&gt;&gt;</code>
+                           </span><span class='stab '></span><div class='docblock'><p>The entry point of the geometry shader. <code>None</code> if you don&#39;t want a geometry shader.
+If you use a geometry shader, you must enable the <code>geometry_shader</code> feature on the device.</p>
+</div><span id='structfield.viewport' class='structfield'><code>viewport: <a class='enum' href='../../vulkano/pipeline/viewport/enum.ViewportsState.html' title='vulkano::pipeline::viewport::ViewportsState'>ViewportsState</a></code>
+                           </span><span class='stab '></span><div class='docblock'><p>Describes the subsection of the framebuffer attachments where the scene will be drawn.
+You can use one or multiple viewports, but using multiple viewports is only relevant with
+a geometry shader.</p>
+</div><span id='structfield.raster' class='structfield'><code>raster: <a class='struct' href='../../vulkano/pipeline/raster/struct.Rasterization.html' title='vulkano::pipeline::raster::Rasterization'>Rasterization</a></code>
+                           </span><span class='stab '></span><div class='docblock'><p>Describes how the implementation determines which pixels are covered by the shape.</p>
+</div><span id='structfield.multisample' class='structfield'><code>multisample: <a class='struct' href='../../vulkano/pipeline/multisample/struct.Multisample.html' title='vulkano::pipeline::multisample::Multisample'>Multisample</a></code>
+                           </span><span class='stab '></span><span id='structfield.fragment_shader' class='structfield'><code>fragment_shader: <a class='struct' href='../../vulkano/pipeline/shader/struct.FragmentShaderEntryPoint.html' title='vulkano::pipeline::shader::FragmentShaderEntryPoint'>FragmentShaderEntryPoint</a>&lt;'a,&nbsp;Fs,&nbsp;Fi,&nbsp;Fo,&nbsp;Fl&gt;</code>
+                           </span><span class='stab '></span><div class='docblock'><p>The entry point of the fragment shader that will be run on the pixels.</p>
+</div><span id='structfield.depth_stencil' class='structfield'><code>depth_stencil: <a class='struct' href='../../vulkano/pipeline/depth_stencil/struct.DepthStencil.html' title='vulkano::pipeline::depth_stencil::DepthStencil'>DepthStencil</a></code>
+                           </span><span class='stab '></span><div class='docblock'><p>Describes how the implementation should perform the depth and stencil tests.</p>
+</div><span id='structfield.blend' class='structfield'><code>blend: <a class='struct' href='../../vulkano/pipeline/blend/struct.Blend.html' title='vulkano::pipeline::blend::Blend'>Blend</a></code>
+                           </span><span class='stab '></span><div class='docblock'><p>Describes how the implementation should merge the color output of the fragment shader with
+the existing value in the attachments.</p>
+</div><span id='structfield.layout' class='structfield'><code>layout: &amp;'a <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;L&gt;</code>
+                           </span><span class='stab '></span><div class='docblock'><p>Describes the list of descriptors and push constants that the various shaders are going to
+use.</p>
+</div><span id='structfield.render_pass' class='structfield'><code>render_pass: <a class='struct' href='../../vulkano/framebuffer/struct.Subpass.html' title='vulkano::framebuffer::Subpass'>Subpass</a>&lt;'a,&nbsp;Rp&gt;</code>
+                           </span><span class='stab '></span><div class='docblock'><p>Which subpass of which render pass this pipeline will run on. It is an error to run a
+graphics pipeline on a different subpass.</p>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "vulkano";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `GraphicsPipelineCreateInfo` struct in crate `vk_sys`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, GraphicsPipelineCreateInfo">
+
+    <title>vk_sys::GraphicsPipelineCreateInfo - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>vk_sys</a></p><script>window.sidebarCurrent = {name: 'GraphicsPipelineCreateInfo', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>vk_sys</a>::<wbr><a class='struct' href=''>GraphicsPipelineCreateInfo</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-1454' class='srclink' href='../src/vk_sys/vk-sys/src/lib.rs.html#1732-1752' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct GraphicsPipelineCreateInfo {
+    pub sType: <a class='type' href='../vk_sys/type.StructureType.html' title='vk_sys::StructureType'>StructureType</a>,
+    pub pNext: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='enum' href='https://doc.rust-lang.org/nightly/std/os/raw/enum.c_void.html' title='std::os::raw::c_void'>c_void</a>,
+    pub flags: <a class='type' href='../vk_sys/type.PipelineCreateFlags.html' title='vk_sys::PipelineCreateFlags'>PipelineCreateFlags</a>,
+    pub stageCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub pStages: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='struct' href='../vk_sys/struct.PipelineShaderStageCreateInfo.html' title='vk_sys::PipelineShaderStageCreateInfo'>PipelineShaderStageCreateInfo</a>,
+    pub pVertexInputState: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='struct' href='../vk_sys/struct.PipelineVertexInputStateCreateInfo.html' title='vk_sys::PipelineVertexInputStateCreateInfo'>PipelineVertexInputStateCreateInfo</a>,
+    pub pInputAssemblyState: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='struct' href='../vk_sys/struct.PipelineInputAssemblyStateCreateInfo.html' title='vk_sys::PipelineInputAssemblyStateCreateInfo'>PipelineInputAssemblyStateCreateInfo</a>,
+    pub pTessellationState: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='struct' href='../vk_sys/struct.PipelineTessellationStateCreateInfo.html' title='vk_sys::PipelineTessellationStateCreateInfo'>PipelineTessellationStateCreateInfo</a>,
+    pub pViewportState: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='struct' href='../vk_sys/struct.PipelineViewportStateCreateInfo.html' title='vk_sys::PipelineViewportStateCreateInfo'>PipelineViewportStateCreateInfo</a>,
+    pub pRasterizationState: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='struct' href='../vk_sys/struct.PipelineRasterizationStateCreateInfo.html' title='vk_sys::PipelineRasterizationStateCreateInfo'>PipelineRasterizationStateCreateInfo</a>,
+    pub pMultisampleState: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='struct' href='../vk_sys/struct.PipelineMultisampleStateCreateInfo.html' title='vk_sys::PipelineMultisampleStateCreateInfo'>PipelineMultisampleStateCreateInfo</a>,
+    pub pDepthStencilState: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='struct' href='../vk_sys/struct.PipelineDepthStencilStateCreateInfo.html' title='vk_sys::PipelineDepthStencilStateCreateInfo'>PipelineDepthStencilStateCreateInfo</a>,
+    pub pColorBlendState: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='struct' href='../vk_sys/struct.PipelineColorBlendStateCreateInfo.html' title='vk_sys::PipelineColorBlendStateCreateInfo'>PipelineColorBlendStateCreateInfo</a>,
+    pub pDynamicState: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='struct' href='../vk_sys/struct.PipelineDynamicStateCreateInfo.html' title='vk_sys::PipelineDynamicStateCreateInfo'>PipelineDynamicStateCreateInfo</a>,
+    pub layout: <a class='type' href='../vk_sys/type.PipelineLayout.html' title='vk_sys::PipelineLayout'>PipelineLayout</a>,
+    pub renderPass: <a class='type' href='../vk_sys/type.RenderPass.html' title='vk_sys::RenderPass'>RenderPass</a>,
+    pub subpass: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub basePipelineHandle: <a class='type' href='../vk_sys/type.Pipeline.html' title='vk_sys::Pipeline'>Pipeline</a>,
+    pub basePipelineIndex: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+}</pre><h2 class='fields'>Fields</h2><span id='structfield.sType' class='structfield'><code>sType: <a class='type' href='../vk_sys/type.StructureType.html' title='vk_sys::StructureType'>StructureType</a></code>
+                           </span><span class='stab '></span><span id='structfield.pNext' class='structfield'><code>pNext: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='enum' href='https://doc.rust-lang.org/nightly/std/os/raw/enum.c_void.html' title='std::os::raw::c_void'>c_void</a></code>
+                           </span><span class='stab '></span><span id='structfield.flags' class='structfield'><code>flags: <a class='type' href='../vk_sys/type.PipelineCreateFlags.html' title='vk_sys::PipelineCreateFlags'>PipelineCreateFlags</a></code>
+                           </span><span class='stab '></span><span id='structfield.stageCount' class='structfield'><code>stageCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span><span class='stab '></span><span id='structfield.pStages' class='structfield'><code>pStages: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='struct' href='../vk_sys/struct.PipelineShaderStageCreateInfo.html' title='vk_sys::PipelineShaderStageCreateInfo'>PipelineShaderStageCreateInfo</a></code>
+                           </span><span class='stab '></span><span id='structfield.pVertexInputState' class='structfield'><code>pVertexInputState: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='struct' href='../vk_sys/struct.PipelineVertexInputStateCreateInfo.html' title='vk_sys::PipelineVertexInputStateCreateInfo'>PipelineVertexInputStateCreateInfo</a></code>
+                           </span><span class='stab '></span><span id='structfield.pInputAssemblyState' class='structfield'><code>pInputAssemblyState: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='struct' href='../vk_sys/struct.PipelineInputAssemblyStateCreateInfo.html' title='vk_sys::PipelineInputAssemblyStateCreateInfo'>PipelineInputAssemblyStateCreateInfo</a></code>
+                           </span><span class='stab '></span><span id='structfield.pTessellationState' class='structfield'><code>pTessellationState: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='struct' href='../vk_sys/struct.PipelineTessellationStateCreateInfo.html' title='vk_sys::PipelineTessellationStateCreateInfo'>PipelineTessellationStateCreateInfo</a></code>
+                           </span><span class='stab '></span><span id='structfield.pViewportState' class='structfield'><code>pViewportState: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='struct' href='../vk_sys/struct.PipelineViewportStateCreateInfo.html' title='vk_sys::PipelineViewportStateCreateInfo'>PipelineViewportStateCreateInfo</a></code>
+                           </span><span class='stab '></span><span id='structfield.pRasterizationState' class='structfield'><code>pRasterizationState: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='struct' href='../vk_sys/struct.PipelineRasterizationStateCreateInfo.html' title='vk_sys::PipelineRasterizationStateCreateInfo'>PipelineRasterizationStateCreateInfo</a></code>
+                           </span><span class='stab '></span><span id='structfield.pMultisampleState' class='structfield'><code>pMultisampleState: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='struct' href='../vk_sys/struct.PipelineMultisampleStateCreateInfo.html' title='vk_sys::PipelineMultisampleStateCreateInfo'>PipelineMultisampleStateCreateInfo</a></code>
+                           </span><span class='stab '></span><span id='structfield.pDepthStencilState' class='structfield'><code>pDepthStencilState: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='struct' href='../vk_sys/struct.PipelineDepthStencilStateCreateInfo.html' title='vk_sys::PipelineDepthStencilStateCreateInfo'>PipelineDepthStencilStateCreateInfo</a></code>
+                           </span><span class='stab '></span><span id='structfield.pColorBlendState' class='structfield'><code>pColorBlendState: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='struct' href='../vk_sys/struct.PipelineColorBlendStateCreateInfo.html' title='vk_sys::PipelineColorBlendStateCreateInfo'>PipelineColorBlendStateCreateInfo</a></code>
+                           </span><span class='stab '></span><span id='structfield.pDynamicState' class='structfield'><code>pDynamicState: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='struct' href='../vk_sys/struct.PipelineDynamicStateCreateInfo.html' title='vk_sys::PipelineDynamicStateCreateInfo'>PipelineDynamicStateCreateInfo</a></code>
+                           </span><span class='stab '></span><span id='structfield.layout' class='structfield'><code>layout: <a class='type' href='../vk_sys/type.PipelineLayout.html' title='vk_sys::PipelineLayout'>PipelineLayout</a></code>
+                           </span><span class='stab '></span><span id='structfield.renderPass' class='structfield'><code>renderPass: <a class='type' href='../vk_sys/type.RenderPass.html' title='vk_sys::RenderPass'>RenderPass</a></code>
+                           </span><span class='stab '></span><span id='structfield.subpass' class='structfield'><code>subpass: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span><span class='stab '></span><span id='structfield.basePipelineHandle' class='structfield'><code>basePipelineHandle: <a class='type' href='../vk_sys/type.Pipeline.html' title='vk_sys::Pipeline'>Pipeline</a></code>
+                           </span><span class='stab '></span><span id='structfield.basePipelineIndex' class='structfield'><code>basePipelineIndex: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code>
+                           </span><span class='stab '></span></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "vk_sys";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

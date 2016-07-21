@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `GraphicsPipelineCreationError` enum in crate `vulkano`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, GraphicsPipelineCreationError">
+
+    <title>vulkano::pipeline::GraphicsPipelineCreationError - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>vulkano</a>::<wbr><a href='index.html'>pipeline</a></p><script>window.sidebarCurrent = {name: 'GraphicsPipelineCreationError', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>vulkano</a>::<wbr><a href='index.html'>pipeline</a>::<wbr><a class='enum' href=''>GraphicsPipelineCreationError</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-18616' class='srclink' href='../../src/vulkano/vulkano/src/pipeline/graphics_pipeline.rs.html#990-1141' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum GraphicsPipelineCreationError {
+    OomError(<a class='enum' href='../../vulkano/enum.OomError.html' title='vulkano::OomError'>OomError</a>),
+    IncompatiblePipelineLayout,
+    VertexGeometryStagesMismatch(<a class='enum' href='../../vulkano/pipeline/shader/enum.ShaderInterfaceMismatchError.html' title='vulkano::pipeline::shader::ShaderInterfaceMismatchError'>ShaderInterfaceMismatchError</a>),
+    VertexTessControlStagesMismatch(<a class='enum' href='../../vulkano/pipeline/shader/enum.ShaderInterfaceMismatchError.html' title='vulkano::pipeline::shader::ShaderInterfaceMismatchError'>ShaderInterfaceMismatchError</a>),
+    VertexFragmentStagesMismatch(<a class='enum' href='../../vulkano/pipeline/shader/enum.ShaderInterfaceMismatchError.html' title='vulkano::pipeline::shader::ShaderInterfaceMismatchError'>ShaderInterfaceMismatchError</a>),
+    TessControlTessEvalStagesMismatch(<a class='enum' href='../../vulkano/pipeline/shader/enum.ShaderInterfaceMismatchError.html' title='vulkano::pipeline::shader::ShaderInterfaceMismatchError'>ShaderInterfaceMismatchError</a>),
+    TessEvalGeometryStagesMismatch(<a class='enum' href='../../vulkano/pipeline/shader/enum.ShaderInterfaceMismatchError.html' title='vulkano::pipeline::shader::ShaderInterfaceMismatchError'>ShaderInterfaceMismatchError</a>),
+    TessEvalFragmentStagesMismatch(<a class='enum' href='../../vulkano/pipeline/shader/enum.ShaderInterfaceMismatchError.html' title='vulkano::pipeline::shader::ShaderInterfaceMismatchError'>ShaderInterfaceMismatchError</a>),
+    GeometryFragmentStagesMismatch(<a class='enum' href='../../vulkano/pipeline/shader/enum.ShaderInterfaceMismatchError.html' title='vulkano::pipeline::shader::ShaderInterfaceMismatchError'>ShaderInterfaceMismatchError</a>),
+    FragmentShaderRenderPassIncompatible,
+    IncompatibleVertexDefinition(<a class='enum' href='../../vulkano/pipeline/vertex/enum.IncompatibleVertexDefinitionError.html' title='vulkano::pipeline::vertex::IncompatibleVertexDefinitionError'>IncompatibleVertexDefinitionError</a>),
+    MaxVertexInputBindingStrideExceeded {
+        binding: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+        max: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+        obtained: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    },
+    MaxVertexInputBindingsExceeded {
+        max: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+        obtained: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    },
+    MaxVertexInputAttributeOffsetExceeded {
+        max: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+        obtained: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    },
+    MaxVertexInputAttributesExceeded {
+        max: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+        obtained: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    },
+    PrimitiveDoesntSupportPrimitiveRestart {
+        primitive: <a class='enum' href='../../vulkano/pipeline/input_assembly/enum.PrimitiveTopology.html' title='vulkano::pipeline::input_assembly::PrimitiveTopology'>PrimitiveTopology</a>,
+    },
+    MultiViewportFeatureNotEnabled,
+    MaxViewportsExceeded {
+        max: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        obtained: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    },
+    MaxViewportDimensionsExceeded,
+    ViewportBoundsExceeded,
+    WideLinesFeatureNotEnabled,
+    DepthClampFeatureNotEnabled,
+    DepthBiasClampFeatureNotEnabled,
+    FillModeNonSolidFeatureNotEnabled,
+    DepthBoundsFeatureNotEnabled,
+    WrongStencilState,
+    TopologyNotMatchingGeometryShader,
+    GeometryShaderFeatureNotEnabled,
+    TessellationShaderFeatureNotEnabled,
+    MismatchBlendingAttachmentsCount,
+    IndependentBlendFeatureNotEnabled,
+    LogicOpFeatureNotEnabled,
+    NoDepthAttachment,
+    NoStencilAttachment,
+    InvalidPrimitiveTopology,
+    MaxTessellationPatchSizeExceeded,
+}</pre><div class='docblock'><p>Error that can happen when creating a graphics pipeline.</p>
+</div><h2 class='variants'>Variants</h2>
+<span id='variant.OomError' class='variant'><code>OomError(<a class='enum' href='../../vulkano/enum.OomError.html' title='vulkano::OomError'>OomError</a>)</code></span><div class='docblock'><p>Not enough memory.</p>
+</div><span id='variant.IncompatiblePipelineLayout' class='variant'><code>IncompatiblePipelineLayout</code></span><div class='docblock'><p>The pipeline layout is not compatible with what the shaders expect.</p>
+</div><span id='variant.VertexGeometryStagesMismatch' class='variant'><code>VertexGeometryStagesMismatch(<a class='enum' href='../../vulkano/pipeline/shader/enum.ShaderInterfaceMismatchError.html' title='vulkano::pipeline::shader::ShaderInterfaceMismatchError'>ShaderInterfaceMismatchError</a>)</code></span><div class='docblock'><p>The interface between the vertex shader and the geometry shader mismatches.</p>
+</div><span id='variant.VertexTessControlStagesMismatch' class='variant'><code>VertexTessControlStagesMismatch(<a class='enum' href='../../vulkano/pipeline/shader/enum.ShaderInterfaceMismatchError.html' title='vulkano::pipeline::shader::ShaderInterfaceMismatchError'>ShaderInterfaceMismatchError</a>)</code></span><div class='docblock'><p>The interface between the vertex shader and the tessellation control shader mismatches.</p>
+</div><span id='variant.VertexFragmentStagesMismatch' class='variant'><code>VertexFragmentStagesMismatch(<a class='enum' href='../../vulkano/pipeline/shader/enum.ShaderInterfaceMismatchError.html' title='vulkano::pipeline::shader::ShaderInterfaceMismatchError'>ShaderInterfaceMismatchError</a>)</code></span><div class='docblock'><p>The interface between the vertex shader and the fragment shader mismatches.</p>
+</div><span id='variant.TessControlTessEvalStagesMismatch' class='variant'><code>TessControlTessEvalStagesMismatch(<a class='enum' href='../../vulkano/pipeline/shader/enum.ShaderInterfaceMismatchError.html' title='vulkano::pipeline::shader::ShaderInterfaceMismatchError'>ShaderInterfaceMismatchError</a>)</code></span><div class='docblock'><p>The interface between the tessellation control shader and the tessellation evaluation
+shader mismatches.</p>
+</div><span id='variant.TessEvalGeometryStagesMismatch' class='variant'><code>TessEvalGeometryStagesMismatch(<a class='enum' href='../../vulkano/pipeline/shader/enum.ShaderInterfaceMismatchError.html' title='vulkano::pipeline::shader::ShaderInterfaceMismatchError'>ShaderInterfaceMismatchError</a>)</code></span><div class='docblock'><p>The interface between the tessellation evaluation shader and the geometry shader
+mismatches.</p>
+</div><span id='variant.TessEvalFragmentStagesMismatch' class='variant'><code>TessEvalFragmentStagesMismatch(<a class='enum' href='../../vulkano/pipeline/shader/enum.ShaderInterfaceMismatchError.html' title='vulkano::pipeline::shader::ShaderInterfaceMismatchError'>ShaderInterfaceMismatchError</a>)</code></span><div class='docblock'><p>The interface between the tessellation evaluation shader and the fragment shader
+mismatches.</p>
+</div><span id='variant.GeometryFragmentStagesMismatch' class='variant'><code>GeometryFragmentStagesMismatch(<a class='enum' href='../../vulkano/pipeline/shader/enum.ShaderInterfaceMismatchError.html' title='vulkano::pipeline::shader::ShaderInterfaceMismatchError'>ShaderInterfaceMismatchError</a>)</code></span><div class='docblock'><p>The interface between the geometry shader and the fragment shader mismatches.</p>
+</div><span id='variant.FragmentShaderRenderPassIncompatible' class='variant'><code>FragmentShaderRenderPassIncompatible</code></span><div class='docblock'><p>The output of the fragment shader is not compatible with what the render pass subpass
+expects.</p>
+</div><span id='variant.IncompatibleVertexDefinition' class='variant'><code>IncompatibleVertexDefinition(<a class='enum' href='../../vulkano/pipeline/vertex/enum.IncompatibleVertexDefinitionError.html' title='vulkano::pipeline::vertex::IncompatibleVertexDefinitionError'>IncompatibleVertexDefinitionError</a>)</code></span><div class='docblock'><p>The vertex definition is not compatible with the input of the vertex shader.</p>
+</div><span id='variant.MaxVertexInputBindingStrideExceeded' class='variant'><code>MaxVertexInputBindingStrideExceeded</code></span><div class='docblock'><p>The maximum stride value for vertex input (ie. the distance between two vertex elements)
+has been exceeded.</p>
+</div><h3 class='fields'>Fields</h3>
+
+                           <table><tr><td id='variant.MaxVertexInputBindingStrideExceeded.field.binding'><code>binding:&nbsp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code></td><td><div class='docblock'><p>Index of the faulty binding.</p>
+</div></td></tr><tr><td id='variant.MaxVertexInputBindingStrideExceeded.field.max'><code>max:&nbsp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code></td><td><div class='docblock'><p>Maximum allowed value.</p>
+</div></td></tr><tr><td id='variant.MaxVertexInputBindingStrideExceeded.field.obtained'><code>obtained:&nbsp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code></td><td><div class='docblock'><p>Value that was passed.</p>
+</div></td></tr></table><span id='variant.MaxVertexInputBindingsExceeded' class='variant'><code>MaxVertexInputBindingsExceeded</code></span><div class='docblock'><p>The maximum number of vertex sources has been exceeded.</p>
+</div><h3 class='fields'>Fields</h3>
+
+                           <table><tr><td id='variant.MaxVertexInputBindingsExceeded.field.max'><code>max:&nbsp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code></td><td><div class='docblock'><p>Maximum allowed value.</p>
+</div></td></tr><tr><td id='variant.MaxVertexInputBindingsExceeded.field.obtained'><code>obtained:&nbsp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code></td><td><div class='docblock'><p>Value that was passed.</p>
+</div></td></tr></table><span id='variant.MaxVertexInputAttributeOffsetExceeded' class='variant'><code>MaxVertexInputAttributeOffsetExceeded</code></span><div class='docblock'><p>The maximum offset for a vertex attribute has been exceeded. This means that your vertex
+struct is too large.</p>
+</div><h3 class='fields'>Fields</h3>
+
+                           <table><tr><td id='variant.MaxVertexInputAttributeOffsetExceeded.field.max'><code>max:&nbsp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code></td><td><div class='docblock'><p>Maximum allowed value.</p>
+</div></td></tr><tr><td id='variant.MaxVertexInputAttributeOffsetExceeded.field.obtained'><code>obtained:&nbsp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code></td><td><div class='docblock'><p>Value that was passed.</p>
+</div></td></tr></table><span id='variant.MaxVertexInputAttributesExceeded' class='variant'><code>MaxVertexInputAttributesExceeded</code></span><div class='docblock'><p>The maximum number of vertex attributes has been exceeded.</p>
+</div><h3 class='fields'>Fields</h3>
+
+                           <table><tr><td id='variant.MaxVertexInputAttributesExceeded.field.max'><code>max:&nbsp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code></td><td><div class='docblock'><p>Maximum allowed value.</p>
+</div></td></tr><tr><td id='variant.MaxVertexInputAttributesExceeded.field.obtained'><code>obtained:&nbsp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code></td><td><div class='docblock'><p>Value that was passed.</p>
+</div></td></tr></table><span id='variant.PrimitiveDoesntSupportPrimitiveRestart' class='variant'><code>PrimitiveDoesntSupportPrimitiveRestart</code></span><div class='docblock'><p>The user requested to use primitive restart, but the primitive topology doesn&#39;t support it.</p>
+</div><h3 class='fields'>Fields</h3>
+
+                           <table><tr><td id='variant.PrimitiveDoesntSupportPrimitiveRestart.field.primitive'><code>primitive:&nbsp;<a class='enum' href='../../vulkano/pipeline/input_assembly/enum.PrimitiveTopology.html' title='vulkano::pipeline::input_assembly::PrimitiveTopology'>PrimitiveTopology</a></code></td><td><div class='docblock'><p>The topology that doesn&#39;t support primitive restart.</p>
+</div></td></tr></table><span id='variant.MultiViewportFeatureNotEnabled' class='variant'><code>MultiViewportFeatureNotEnabled</code></span><div class='docblock'><p>The <code>multi_viewport</code> feature must be enabled in order to use multiple viewports at once.</p>
+</div><span id='variant.MaxViewportsExceeded' class='variant'><code>MaxViewportsExceeded</code></span><div class='docblock'><p>The maximum number of viewports has been exceeded.</p>
+</div><h3 class='fields'>Fields</h3>
+
+                           <table><tr><td id='variant.MaxViewportsExceeded.field.max'><code>max:&nbsp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></td><td><div class='docblock'><p>Maximum allowed value.</p>
+</div></td></tr><tr><td id='variant.MaxViewportsExceeded.field.obtained'><code>obtained:&nbsp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></td><td><div class='docblock'><p>Value that was passed.</p>
+</div></td></tr></table><span id='variant.MaxViewportDimensionsExceeded' class='variant'><code>MaxViewportDimensionsExceeded</code></span><div class='docblock'><p>The maximum dimensions of viewports has been exceeded.</p>
+</div><span id='variant.ViewportBoundsExceeded' class='variant'><code>ViewportBoundsExceeded</code></span><div class='docblock'><p>The minimum or maximum bounds of viewports have been exceeded.</p>
+</div><span id='variant.WideLinesFeatureNotEnabled' class='variant'><code>WideLinesFeatureNotEnabled</code></span><div class='docblock'><p>The <code>wide_lines</code> feature must be enabled in order to use a line width superior to 1.0.</p>
+</div><span id='variant.DepthClampFeatureNotEnabled' class='variant'><code>DepthClampFeatureNotEnabled</code></span><div class='docblock'><p>The <code>depth_clamp</code> feature must be enabled in order to use depth clamping.</p>
+</div><span id='variant.DepthBiasClampFeatureNotEnabled' class='variant'><code>DepthBiasClampFeatureNotEnabled</code></span><div class='docblock'><p>The <code>depth_bias_clamp</code> feature must be enabled in order to use a depth bias clamp different
+from 0.0.</p>
+</div><span id='variant.FillModeNonSolidFeatureNotEnabled' class='variant'><code>FillModeNonSolidFeatureNotEnabled</code></span><div class='docblock'><p>The <code>fill_mode_non_solid</code> feature must be enabled in order to use a polygon mode different
+from <code>Fill</code>.</p>
+</div><span id='variant.DepthBoundsFeatureNotEnabled' class='variant'><code>DepthBoundsFeatureNotEnabled</code></span><div class='docblock'><p>The <code>depth_bounds</code> feature must be enabled in order to use depth bounds testing.</p>
+</div><span id='variant.WrongStencilState' class='variant'><code>WrongStencilState</code></span><div class='docblock'><p>The requested stencil test is invalid.</p>
+</div><span id='variant.TopologyNotMatchingGeometryShader' class='variant'><code>TopologyNotMatchingGeometryShader</code></span><div class='docblock'><p>The primitives topology does not match what the geometry shader expects.</p>
+</div><span id='variant.GeometryShaderFeatureNotEnabled' class='variant'><code>GeometryShaderFeatureNotEnabled</code></span><div class='docblock'><p>The <code>geometry_shader</code> feature must be enabled in order to use geometry shaders.</p>
+</div><span id='variant.TessellationShaderFeatureNotEnabled' class='variant'><code>TessellationShaderFeatureNotEnabled</code></span><div class='docblock'><p>The <code>tessellation_shader</code> feature must be enabled in order to use tessellation shaders.</p>
+</div><span id='variant.MismatchBlendingAttachmentsCount' class='variant'><code>MismatchBlendingAttachmentsCount</code></span><div class='docblock'><p>The number of attachments specified in the blending does not match the number of
+attachments in the subpass.</p>
+</div><span id='variant.IndependentBlendFeatureNotEnabled' class='variant'><code>IndependentBlendFeatureNotEnabled</code></span><div class='docblock'><p>The <code>independent_blend</code> feature must be enabled in order to use different blending
+operations per attachment.</p>
+</div><span id='variant.LogicOpFeatureNotEnabled' class='variant'><code>LogicOpFeatureNotEnabled</code></span><div class='docblock'><p>The <code>logic_op</code> feature must be enabled in order to use logic operations.</p>
+</div><span id='variant.NoDepthAttachment' class='variant'><code>NoDepthAttachment</code></span><div class='docblock'><p>The depth test requires a depth attachment but render pass has no depth attachment, or
+depth writing is enabled and the depth attachment is read-only.</p>
+</div><span id='variant.NoStencilAttachment' class='variant'><code>NoStencilAttachment</code></span><div class='docblock'><p>The stencil test requires a stencil attachment but render pass has no stencil attachment, or
+stencil writing is enabled and the stencil attachment is read-only.</p>
+</div><span id='variant.InvalidPrimitiveTopology' class='variant'><code>InvalidPrimitiveTopology</code></span><div class='docblock'><p>Tried to use a patch list without a tessellation shader, or a non-patch-list with a
+tessellation shader.</p>
+</div><span id='variant.MaxTessellationPatchSizeExceeded' class='variant'><code>MaxTessellationPatchSizeExceeded</code></span><div class='docblock'><p>The <code>maxTessellationPatchSize</code> limit was exceeded.</p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='enum' href='../../vulkano/pipeline/enum.GraphicsPipelineCreationError.html' title='vulkano::pipeline::GraphicsPipelineCreationError'>GraphicsPipelineCreationError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-18412' class='srclink' href='../../src/vulkano/vulkano/src/pipeline/graphics_pipeline.rs.html#989' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../../vulkano/pipeline/enum.GraphicsPipelineCreationError.html' title='vulkano::pipeline::GraphicsPipelineCreationError'>GraphicsPipelineCreationError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-18436' class='srclink' href='../../src/vulkano/vulkano/src/pipeline/graphics_pipeline.rs.html#989' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../vulkano/pipeline/enum.GraphicsPipelineCreationError.html' title='vulkano::pipeline::GraphicsPipelineCreationError'>GraphicsPipelineCreationError</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>This method tests for <code>self</code> and <code>other</code> values to be equal, and is used by <code>==</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
+</div><h4 id='method.ne' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../vulkano/pipeline/enum.GraphicsPipelineCreationError.html' title='vulkano::pipeline::GraphicsPipelineCreationError'>GraphicsPipelineCreationError</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>This method tests for <code>!=</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../vulkano/pipeline/enum.GraphicsPipelineCreationError.html' title='vulkano::pipeline::GraphicsPipelineCreationError'>GraphicsPipelineCreationError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-18531' class='srclink' href='../../src/vulkano/vulkano/src/pipeline/graphics_pipeline.rs.html#989' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../../vulkano/pipeline/enum.GraphicsPipelineCreationError.html' title='vulkano::pipeline::GraphicsPipelineCreationError'>GraphicsPipelineCreationError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-18592' class='srclink' href='../../src/vulkano/vulkano/src/pipeline/graphics_pipeline.rs.html#989' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../../vulkano/pipeline/enum.GraphicsPipelineCreationError.html' title='vulkano::pipeline::GraphicsPipelineCreationError'>GraphicsPipelineCreationError</a></code></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/std/error/trait.Error.html' title='std::error::Error'>Error</a> for <a class='enum' href='../../vulkano/pipeline/enum.GraphicsPipelineCreationError.html' title='vulkano::pipeline::GraphicsPipelineCreationError'>GraphicsPipelineCreationError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-18674' class='srclink' href='../../src/vulkano/vulkano/src/pipeline/graphics_pipeline.rs.html#1143-1287' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.description' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/std/error/trait.Error.html#tymethod.description' class='fnname'>description</a>(&amp;self) -&gt; &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a></code></h4>
+<div class='docblock'><p>A short description of the error. <a href="https://doc.rust-lang.org/nightly/std/error/trait.Error.html#tymethod.description">Read more</a></p>
+</div><h4 id='method.cause' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/std/error/trait.Error.html#method.cause' class='fnname'>cause</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='trait' href='https://doc.rust-lang.org/nightly/std/error/trait.Error.html' title='std::error::Error'>Error</a>&gt;</code></h4>
+<div class='docblock'><p>The lower-level cause of this error, if any. <a href="https://doc.rust-lang.org/nightly/std/error/trait.Error.html#method.cause">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html' title='core::fmt::Display'>Display</a> for <a class='enum' href='../../vulkano/pipeline/enum.GraphicsPipelineCreationError.html' title='vulkano::pipeline::GraphicsPipelineCreationError'>GraphicsPipelineCreationError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-18688' class='srclink' href='../../src/vulkano/vulkano/src/pipeline/graphics_pipeline.rs.html#1289-1294' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt-1' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, fmt: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>,&nbsp;<a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Error.html' title='core::fmt::Error'>Error</a>&gt;</code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;<a class='enum' href='../../vulkano/enum.OomError.html' title='vulkano::OomError'>OomError</a>&gt; for <a class='enum' href='../../vulkano/pipeline/enum.GraphicsPipelineCreationError.html' title='vulkano::pipeline::GraphicsPipelineCreationError'>GraphicsPipelineCreationError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-18694' class='srclink' href='../../src/vulkano/vulkano/src/pipeline/graphics_pipeline.rs.html#1296-1301' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(err: <a class='enum' href='../../vulkano/enum.OomError.html' title='vulkano::OomError'>OomError</a>) -&gt; <a class='enum' href='../../vulkano/pipeline/enum.GraphicsPipelineCreationError.html' title='vulkano::pipeline::GraphicsPipelineCreationError'>GraphicsPipelineCreationError</a></code></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;<a class='enum' href='../../vulkano/pipeline/vertex/enum.IncompatibleVertexDefinitionError.html' title='vulkano::pipeline::vertex::IncompatibleVertexDefinitionError'>IncompatibleVertexDefinitionError</a>&gt; for <a class='enum' href='../../vulkano/pipeline/enum.GraphicsPipelineCreationError.html' title='vulkano::pipeline::GraphicsPipelineCreationError'>GraphicsPipelineCreationError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-18697' class='srclink' href='../../src/vulkano/vulkano/src/pipeline/graphics_pipeline.rs.html#1303-1308' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-1' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(err: <a class='enum' href='../../vulkano/pipeline/vertex/enum.IncompatibleVertexDefinitionError.html' title='vulkano::pipeline::vertex::IncompatibleVertexDefinitionError'>IncompatibleVertexDefinitionError</a>) -&gt; <a class='enum' href='../../vulkano/pipeline/enum.GraphicsPipelineCreationError.html' title='vulkano::pipeline::GraphicsPipelineCreationError'>GraphicsPipelineCreationError</a></code></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;Error&gt; for <a class='enum' href='../../vulkano/pipeline/enum.GraphicsPipelineCreationError.html' title='vulkano::pipeline::GraphicsPipelineCreationError'>GraphicsPipelineCreationError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-18700' class='srclink' href='../../src/vulkano/vulkano/src/pipeline/graphics_pipeline.rs.html#1310-1323' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-2' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(err: Error) -&gt; <a class='enum' href='../../vulkano/pipeline/enum.GraphicsPipelineCreationError.html' title='vulkano::pipeline::GraphicsPipelineCreationError'>GraphicsPipelineCreationError</a></code></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "vulkano";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>
